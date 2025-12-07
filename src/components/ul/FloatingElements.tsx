@@ -32,7 +32,7 @@ const FloatingElements = () => {
             duration: element.duration,
             delay: element.delay,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: [0.25, 0.1, 0.25, 1],
           }}
           style={{
             left: element.x,
@@ -59,7 +59,7 @@ const FloatingElements = () => {
           transition={{
             duration: 30 + i * 5,
             repeat: Infinity,
-            ease: "linear",
+            ease: [0.25, 0.1, 0.25, 1],
           }}
         >
           <div

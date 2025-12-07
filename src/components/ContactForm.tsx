@@ -163,7 +163,7 @@ const ContactForm = () => {
               transition={{
                 duration: 4,
                 repeat: Infinity,
-                ease: "easeInOut",
+                ease: [0.25, 0.1, 0.25, 1],
               }}
               className="absolute top-10 right-10 w-32 h-32 rounded-full bg-gradient-to-br from-cyan-500 via-blue-500 to-purple-500 blur-3xl opacity-30"
             />
@@ -175,7 +175,7 @@ const ContactForm = () => {
               transition={{
                 duration: 5,
                 repeat: Infinity,
-                ease: "easeInOut",
+                ease: [0.25, 0.1, 0.25, 1],
                 delay: 1,
               }}
               className="absolute bottom-10 left-10 w-40 h-40 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 blur-3xl opacity-20"
@@ -320,7 +320,7 @@ const ContactForm = () => {
                       transition={{
                         duration: 1,
                         repeat: Infinity,
-                        ease: "linear",
+                        ease: [0.25, 0.1, 0.25, 1],
                       }}
                       className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
                     />

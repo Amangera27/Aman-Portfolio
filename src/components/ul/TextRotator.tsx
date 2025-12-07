@@ -82,7 +82,7 @@ const TextRotator: React.FC<TextRotatorProps> = ({
           transition={{
             duration: 0.8,
             repeat: Infinity,
-            ease: "linear",
+            ease: [0.25, 0.1, 0.25, 1],
           }}
         >
           |

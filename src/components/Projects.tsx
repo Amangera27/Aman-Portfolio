@@ -144,7 +144,7 @@ const Projects = () => {
                     transition={{
                       duration: 3,
                       repeat: Infinity,
-                      ease: "easeInOut",
+                      ease: [0.25, 0.1, 0.25, 1],
                     }}
                     className={`absolute top-10 right-10 w-32 h-32 rounded-full bg-gradient-to-br ${project.gradient} blur-3xl opacity-30`}
                   />
@@ -156,7 +156,7 @@ const Projects = () => {
                     transition={{
                       duration: 4,
                       repeat: Infinity,
-                      ease: "easeInOut",
+                      ease: [0.25, 0.1, 0.25, 1],
                       delay: 1,
                     }}
                     className={`absolute bottom-10 left-10 w-40 h-40 rounded-full bg-gradient-to-br ${project.gradient} blur-3xl opacity-20`}

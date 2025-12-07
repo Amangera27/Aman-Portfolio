@@ -21,7 +21,7 @@ const AnimatedGradientBg = () => {
           duration: 40,
           repeat: Infinity,
           repeatType: "reverse",
-          ease: "easeInOut",
+          ease: [0.25, 0.1, 0.25, 1],
         }}
       />
 
@@ -39,7 +39,7 @@ const AnimatedGradientBg = () => {
           duration: 35,
           repeat: Infinity,
           repeatType: "reverse",
-          ease: "easeInOut",
+          ease: [0.25, 0.1, 0.25, 1],
         }}
       />
 
@@ -57,7 +57,7 @@ const AnimatedGradientBg = () => {
           duration: 30,
           repeat: Infinity,
           repeatType: "reverse",
-          ease: "easeInOut",
+          ease: [0.25, 0.1, 0.25, 1],
         }}
       />
     </div>
