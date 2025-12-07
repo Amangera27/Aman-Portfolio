@@ -17,7 +17,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <motion.div
             className="relative w-[fit-content]"
@@ -88,7 +88,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <div className="relative">
             {/* Circular Orbit Particles */}
