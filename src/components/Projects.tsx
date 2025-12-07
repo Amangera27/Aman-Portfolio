@@ -61,7 +61,7 @@ const Projects = () => {
       rotateX: 0,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1], // FIXED easing curve
+        ease: [0.42, 0, 0.58, 1] as [number, number, number, number], // cubic-bezier equivalent of easeInOut
       },
     },
   };
