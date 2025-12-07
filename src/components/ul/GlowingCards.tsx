@@ -8,6 +8,7 @@ export interface GlowingCardProps {
   className?: string;
   glowColor?: string;
   hoverEffect?: boolean;
+  style?: React.CSSProperties;
 }
 
 export interface GlowingCardsProps {
@@ -148,7 +149,7 @@ export const GlowingCards: React.FC<GlowingCardsProps> = ({
         )}
         style={{ padding: "var(--padding)" }}
       >
-        {children}
+        <div className="relative">{children}</div>
 
         {enableGlow && (
           <div
@@ -166,15 +167,17 @@ export const GlowingCards: React.FC<GlowingCardsProps> = ({
           >
             {React.Children.map(children, (child) => {
               if (React.isValidElement(child) && child.type === GlowingCard) {
-                const cardGlowColor = child.props.glowColor || "#3b82f6";
+                const typedChild =
+                  child as React.ReactElement<GlowingCardProps>;
+                const cardGlowColor = typedChild.props.glowColor || "#3b82f6";
                 return React.cloneElement(child as React.ReactElement<any>, {
                   className: cn(
-                    child.props.className,
+                    typedChild.props.className,
                     "bg-opacity-15 dark:bg-opacity-15",
                     "border-opacity-100 dark:border-opacity-100"
                   ),
                   style: {
-                    ...child.props.style,
+                    ...typedChild.props.style,
                     backgroundColor: cardGlowColor + "15",
                     borderColor: cardGlowColor,
                     boxShadow: "0 0 0 1px inset " + cardGlowColor,

@@ -28,7 +28,7 @@ const CircularOrbitParticles: React.FC<CircularOrbitParticlesProps> = ({
   glowIntensity = 10,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number | undefined>();
+  const animationRef = useRef<number | undefined>(undefined);
   const particlesRef = useRef<Particle[]>([]);
   const timeRef = useRef(0);
 
