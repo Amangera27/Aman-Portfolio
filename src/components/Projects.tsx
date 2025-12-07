@@ -50,14 +50,18 @@ const Projects = () => {
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 100, rotateX: -15 },
+    hidden: {
+      opacity: 0,
+      y: 20,
+      rotateX: -15,
+    },
     visible: {
       opacity: 1,
       y: 0,
       rotateX: 0,
       transition: {
-        duration: 0.8,
-        ease: "easeOut",
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1], // FIXED easing curve
       },
     },
   };
